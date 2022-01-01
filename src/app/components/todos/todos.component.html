@@ -1,0 +1,18 @@
+<div class="todo__main">
+  <form (ngSubmit)="todoInput()">
+    <input type="text" name="inputTodo" placeholder="Please Enter..." class="todo__input" [(ngModel)]="inputTodoItem">
+    <button class="todo__btn todo__btn--add">Add</button>
+  </form>
+
+  <div class="todo__lists" *ngFor="let todo of todoContent; let i = index">
+    <div class="todo__content">
+      <p class="todo__index">{{i}}</p>
+      <p class="todo__item {{todo.itemStatus ? 'todo__done' : ''}}">{{todo.todoItem}}</p>
+    </div>
+
+    <div class="todo__buttons">
+      <button class="todo__btn todo__btn--done" (click)="todoDone(i)">Done</button>
+      <button class="todo__btn todo__btn--remove" (click)="todoDelete(i)">Remove</button>
+    </div>
+  </div>
+</div>

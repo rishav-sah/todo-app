@@ -1,0 +1,16 @@
+.todo {
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: #EAEBED;
+
+  .todo__header {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .todo__title {
+    color: #007090;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
